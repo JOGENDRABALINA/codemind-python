@@ -1,12 +1,12 @@
 import math
 
-def is_perfect_square(num):
-   
-    square_root = math.isqrt(num)
-    return square_root * square_root == num
+def is_perfect_square(number):
+    square_root = math.isqrt(number)
+    return square_root * square_root == number
 
-number = int(input())
-if is_perfect_square(number):
-    print(True)
-else:
-    print(False)
+if __name__ == "__main__":
+    number = int(input())
+    if is_perfect_square(number):
+        print(True)
+    else:
+        print(False)
