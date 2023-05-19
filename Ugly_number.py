@@ -1,17 +1,17 @@
-def is_ugly_number(num):
-    
-    if num <= 0:
+def is_ugly(number):
+    if number <= 0:
         return False
-    while num % 2 == 0:
-        num //= 2
-    while num % 3 == 0:
-        num //= 3
-    while num % 5 == 0:
-        num //= 5
-    return num == 1
+    while number % 2 == 0:
+        number //= 2
+    while number % 3 == 0:
+        number //= 3
+    while number % 5 == 0:
+        number //= 5
+    return number == 1
 
-number = int(input())
-if is_ugly_number(number):
-    print("Ugly Number")
-else:
-    print("Not Ugly Number")
+if __name__ == "__main__":
+    number = int(input())
+    if is_ugly(number):
+        print("Ugly Number")
+    else:
+        print("Not Ugly Number")
