@@ -1,23 +1,10 @@
-def reverse_number(num):
+def reverse_number(number):
+    reversed_str = str(number)[::-1]
+    reversed_number = int(reversed_str)
     
-    reversed_num = 0
-    is_negative = False
+    return reversed_number
 
-    if num < 0:
-        is_negative = True
-        num = -num
-
-    while num != 0:
-        remainder = num % 10
-        reversed_num = (reversed_num * 10) + remainder
-        num = num // 10
-
-    if is_negative:
-        reversed_num = -reversed_num
-
-    return reversed_num
-
-
-number = int(input())
-reversed_number = reverse_number(number)
-print(reversed_number)
+if __name__ == "__main__":
+    number = int(input())
+    reversed_number = reverse_number(number)
+    print( reversed_number)
